@@ -1,0 +1,59 @@
+body {
+
+    background-color: #023e7d;
+    text-align: center;
+    font-family: Iceland;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+button {
+
+    font-size: 76px;
+    font-family: Iceland;
+    
+    border: none;
+    border-radius: 55px;
+
+    margin-top: 45px;
+    margin-bottom: 60px;
+
+    width: 250px;
+    height: 85px; 
+}
+
+button:hover {
+
+    background-color: #023e7d;
+    color: white;
+    cursor:pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+#container {
+
+    background-color: white;
+    width: 800px;
+    height: 600px;
+
+    border: none;
+    border-radius: 35px;
+
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+#signup {
+    font-size: 36px;
+}
+

@@ -1,0 +1,54 @@
+/*DD6363*/
+body {
+
+    background-color: #B21010;
+}
+
+label {
+
+    color: white;
+    font-size: 146px;
+    font-family: Iceland;
+}
+
+input {
+
+    text-align: center;
+
+    font-size: 56px;
+    font-family: Iceland;
+
+    width: 531px;
+    height: 84px;
+
+    border: None;
+    border-radius: 35px;
+}
+
+button {
+
+    width: 498px;
+    height: 68px;
+
+    font-size: 64px;
+    font-family: Iceland;
+
+    border: None;
+    border-radius: 35px;
+    margin: 25px;
+}
+
+button:hover {
+    background-color: black;
+    color: #B21010;
+}
+
+#button-wrap {
+    margin-top: 70px;
+}
+
+#credential-wrap {
+
+    text-align: center;
+    margin-top: 8%;
+}

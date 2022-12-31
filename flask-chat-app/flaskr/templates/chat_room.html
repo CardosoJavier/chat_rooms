@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask-SocketIO-Chat: {{ room }}</title>
+        <link rel="stylesheet" href="{{url_for("static", filename="CSS/chat_room.css")}}">
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="//cdn.socket.io/4.4.1/socket.io.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            let socket;
+            $(document).ready(function(){
+
+                // connect to server
+                socket = io.connect('http://' + document.domain + ':' + location.port + '/chat');
+
+                /* ---------- Client to Server ---------- */
+                
+                // emit message when sockets connect
+                socket.on('connect', function() {
+
+                    // send username to server
+                    socket.emit('joined', {
+                        user: "{{name}}"
+                    });
+
+                    // get user message from form and send it to server
+                    let msgElem = document.getElementById("msg-input");
+                    let msgForm = document.getElementById("mgs-form");
+
+                    // prevent page to reload
+                    msgForm.onsubmit = function(event) {
+                        event.preventDefault();
+
+                        // make sure message is not empty
+                        msg = msgElem.value.trim()
+                        if (msg.length)
+                        {
+                            // emit message to server
+                            socket.emit('message', {
+                                user : "{{name}}",
+                                userMsg : msg
+                            })
+                        }
+                    }
+                });
+
+                /* ---------- Server to Client ---------- */
+
+                // Notify all clients about new user joined the room
+                socket.on('status', function(data) {
+
+                    // create and append new element as notification
+                    const notify = document.createElement('h2');
+                    const notifyNode = document.createTextNode(data.user + ' ' + data.status);
+                    notify.appendChild(notifyNode);
+
+                    document.getElementById("message").appendChild(notify);
+                });
+
+                // send user message to all clients
+                socket.on('message', function(data) {
+
+                    // create and append user message to chat
+                    const message = document.createElement('h3');
+                    const msgNode = document.createTextNode(data.user + ': ' + data.msg);
+                    message.appendChild(msgNode);
+
+                    document.getElementById("message").appendChild(message);
+
+                });
+
+            });
+
+            /* ---------- functions ---------- */
+            function leave_room() {
+
+                socket.emit('left', {user:"{{name}}"}, function() {
+
+                    socket.disconnect();
+
+                    // go back to main page
+                    window.location.href = "{{url_for('views.home')}}"
+
+                });
+            }
+        </script>
+    </head>
+
+    <body>
+        
+        <div id="header-wrap">
+            <h1 class="header-elem">Room: {{room}} as {{name}}</h1>
+        </div>
+
+        <div id="chat-space">
+            <p id="message"></p>
+        </div>
+
+        <div id="msg-wrap">
+            <form id="mgs-form">
+                <input id="msg-input" placeholder="Enter message"></input>
+                <button type="submit">Send</button>
+                <button type='button' onclick="leave_room()">Leave</button>
+            </form>
+        </div>
+
+    </body>
+</html>

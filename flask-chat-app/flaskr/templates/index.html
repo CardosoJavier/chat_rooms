@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Chat Rooms</title>
+        <link rel="stylesheet" href="{{url_for('static', filename="CSS/index.css")}}">
+    </head>
+    <body>
+        <div id="container">
+
+            <div id="container">
+                <h1>Welcome to The Chat Rooms</h1>
+
+                <a href="{{url_for("authn.login")}}"><button>Login</button></a>
+                <br>
+                <a id="signup" href="{{url_for("authn.sign_up")}}">Don't have an account? Sign Up</a>
+            </div>
+        </div>
+    </body>
+</html>

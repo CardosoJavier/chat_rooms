@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Join Room</title>
+
+        <link rel="stylesheet" href="{{url_for("static", filename="CSS/join_room.css")}}">
+    </head>
+
+    <body>
+        <!-- Get username and room key -->
+        <div id="credential-wrap">
+            <form method="POST">
+    
+                <div id="key_wrapper">
+                    <label>Room Key: </label>
+                    <input name="roomKey"  placeholder="xxx - xxx"></input>
+                </div>
+    
+                <div id="button-wrap">
+                    <a href="{{url_for("views.home")}}"><button type="button">Back</button></a>
+                    <button type="submit" id="submit-btn">Enter</button>                    
+                </div>
+            </form>    
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    background-color: #7b2cbf;
+    text-align: center;
+    font-family: Iceland;
+}
+
+h1 {
+    font-size: 76px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+button {
+    border: none;
+    border-radius: 35px;
+    margin-top: 45px;
+
+    width: 200px;
+    height: 50px;
+
+    font-size: 26px;
+}
+
+button:hover {
+
+    background-color: #7b2cbf;
+    color: white;
+}
+
+#container {
+
+    background-color: white;
+    width: 800px;
+    height: 600px;
+
+    border: none;
+    border-radius: 35px;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+#label-wrap {
+    width: 750px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    font-size: 20px;
+}

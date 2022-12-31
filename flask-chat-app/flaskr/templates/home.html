@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chat Rooms</title>
+        <link rel="stylesheet" href="{{url_for('static', filename="CSS/home.css")}}">
+    </head>
+
+    <body>
+        <!-- header -->
+        <h1>Welcome back, {{user}}</h1>
+
+        <!-- options -->
+        <div id="options">
+            <a href="{{url_for("views.generate_key")}}"><button>Generate Key</button></a>
+            <a href="{{url_for("views.join_room")}}"><button>Enter Room</button></a>
+            <a href="{{url_for("authn.logout")}}"><button>Logout</button></a>
+        </div>
+
+    </body>
+</html>

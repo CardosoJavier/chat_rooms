@@ -1,0 +1,60 @@
+body {
+    background-color: #28C2E3;
+}
+
+#key-wrap {
+
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+
+    font-size: 196px;
+    font-family: Iceland;
+}
+
+h2 {
+
+    color: black;
+    background-color: white;
+
+    font-size: 94px;
+    font-family: Iceland;
+
+    border: None;
+    border-radius: 55px;
+
+    width: 531px;
+    height: 94px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+
+    text-align: center;
+    background-color: white;
+    color: black;
+
+    font-size: 55px;
+    font-family: Iceland;
+
+    border: None;
+    border-radius: 35px;
+
+    width: 195px;
+    height: 65px;
+}
+
+button:hover {
+    background-color: black;
+    color: #28C2E3;
+}
+
+a {
+    text-decoration: None;
+}

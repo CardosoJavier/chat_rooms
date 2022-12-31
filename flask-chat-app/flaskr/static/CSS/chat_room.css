@@ -1,0 +1,119 @@
+body {
+    background-color: #1E1E1E;
+    text-align: center;
+}
+
+h2 {
+
+    color: white;
+    background-color: #235079;
+
+    font-size: 56px;
+    
+    border: None;
+    border-radius: 35px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    margin: 35px;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: fit-content;
+    width: fit-content;
+}
+
+h3 {
+
+    color: black;
+    background-color: white;
+
+    font-size: 36px;
+    
+    border: None;
+    border-radius: 35px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    margin: 35px;
+    margin-right: auto;
+
+    height: fit-content;
+    width: fit-content;
+}
+
+#header-wrap {
+    position: fixed;
+
+    top:0;
+    width: 100%;
+    height: 100px;
+
+    background-color: #235079;
+    color: white;
+
+}
+
+#header-wrap h1 {
+    font-family: Iceland;
+    font-size: 90px;
+
+    margin-top: auto;
+}
+
+#header-wrap button {
+    
+    border: none;
+    border-radius: 35px;
+
+    margin-left: 80%;
+    margin-top: 0%;
+
+    font-size: 46px;
+    font-family: Iceland;
+}
+
+#msg-wrap {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    background-color: #235079;
+    
+    border: None;
+    padding: 20px;
+}
+
+#msg-wrap input {
+    width: 594px;
+    height: 61px;
+
+    border: None;
+    border-radius: 35px;
+
+    text-align: center;
+    font-size: large;
+}
+
+#msg-wrap button {
+    width: 159px;
+    height: 61px;
+
+    border-radius: 35px;
+    border: None;
+
+    margin-left: 20px;
+    font-size: large;
+}
+
+#msg-wrap button:hover {
+    background-color: black;
+    color: white;
+}
+
+#chat-space {
+    margin-top: 130px;
+}
+

@@ -1,0 +1,41 @@
+body {
+    background-color: #6C6ADE;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 150px;
+    font-family: Iceland;
+}
+
+a {
+    text-decoration: None;
+}
+
+#options {
+
+    text-align: center;
+}
+
+#options button {
+
+    font-size: 55px;
+    font-family: Iceland;
+    color: black;
+
+    border: None;
+    padding: 10px;
+    margin: 25px;
+
+    width: 500px;
+    height: 88px;
+
+    border-radius: 55px;
+}
+
+#options button:hover {
+
+    background-color: black;
+    color: #6C6ADE;
+}
